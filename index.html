@@ -2,65 +2,154 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="index.css">
-    <link rel="shortcut icon" href="/images/favicon_io/favicon-32x32.png" type="image/x-icon">
-    <title>Portfolio | Himanshu Kumar</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HOME PAGE</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="hero" id="hero">
-        <nav>
-           <a href="#hero"> <h2 class="logo"> PORT<span>FOLIO</span> </h2></a>
-            <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#"> ABOUT</a></li>
-                <li id="resumelink"><a href="#resume">RESUME</a></li>
-                <li><a href="#">SKILLS</a></li>
-                <li><a href="#">PROJECTS</a></li>
+    <nav id="nav-menu">
+        <ul>
+            <li><a class="nav-link home" href="#home">HOME</a></li>
+            <li><a class="nav-link about" href="#about">ABOUT</a></li>
+            <li><a class="nav-link skills" href="#skills">SKILLS</a></li>
+            <li><a class="nav-link projects" href="#projects">PROJECTS</a></li>
+            <li><a class="nav-link contact" href="#contact">CONTACT</a></li>
+            <li><a class="nav-link resume" href="#"></a></li>
+        </ul>
+    </nav>
 
-            </ul>
-            <button type="button">Contact Us</button>
-        </nav>
-        <img src="./images/fad225214130494f40d2c8f22166aab4.gif" class="bird" alt="">
-        <div class="cont">
-            <div class="left">
-                <h3>Hi There!</h3>
-                <h1>I Am <span class="name"></span></h1>
-                <h2>Full-Stack Developer</h2>
-                <div class="social">
-                    <a href="https://github.com/hmu35"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/himanshu-kumar-764822257/"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.instagram.com/hmu_35/"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-                <button>More About Me</button>
-            </div>
-            
-            
+
+
+    <!-------------------- HOME ---------------------->
+    <section id="home">
+        <img src="./image/2.png" class="home-img" alt="#" />
+        <h1 id="user-detail-name">Himanshu Kumar</h1>
+        <h2 id="user-detail-intro">I am Full Stack Web Developer </h2>
+    </section>
+
+
+
+    <!-------------------- ABOUT ---------------------->
+    <section title="About" id="about" class="about section">
+        <title>About</title>
+        <h1 id="user-detail-name">Himanshu Kumar</h1>
+        <h2 id="user-detail-intro">I am a Developer who knows HTML, CSS, JAVASCRIPT, NODEJS, EXPRESS.JS, MONGODB,
+            POSTMAN</h2>
+    </section>
+
+
+
+    <!-------------------- SKILLS ---------------------->
+    <section id="skills">
+        <div class="skills-card">
+            <img class="skills-card-img"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Node.js_logo.svg/2560px-Node.js_logo.svg.png"
+                alt="nodejs.png" />
+            <h5 class="skills-card-name">Node JS</h5>
         </div>
-       
+        <div class="skills-card">
+            <img class="skills-card-img"
+                src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.edureka.co%2Fblog%2Fexpressjs-tutorial%2F&psig=AOvVaw1Nvd5UopILGcTiRz6_iGyI&ust=1675883715544000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCKjs-LyPhP0CFQAAAAAdAAAAABAE"
+                alt="express.png" />
+            <h5 class="skills-card-name">Express JS</h5>
+        </div>
+        <div class="skills-card">
+            <img class="skills-card-img" src="https://www.pngall.com/wp-content/uploads/13/Mongodb-Transparent.png"
+                alt="mongodb.png" />
+            <h5 class="skills-card-name">Mongo DB</h5>
+        </div>
+    </section>
+
+
+
+    <!-------------------- PROJECTS ---------------------->
+    <section id="projects">Projects
+        
+        <div class="project-card">
+            <img src="./image/myntra.png" alt="">
+            <title class="project-title">Myntra</title>
+            <p class="project-description">Clone of 
+                </p>
+            <h3 class="project-tech-stack">Html|CSS|JavaScript</h3>
+            <p class="project-github-link">Github link <a
+                    href="https://github.com/ayushi9797/wiry-measure-2833"></a></p>
+            <p class="project-deployed-link"> Deployed link<a
+                    href="https://lively-blini-b17740.netlify.app/"></a></p>
+        </div>
+
+        <div class="project-card">
+          <img src="./image/myntra.png" alt="">
+          <title class="project-title">Myntra</title>
+          <p class="project-description">Clone of 
+              </p>
+          <h3 class="project-tech-stack">Html|CSS|JavaScript</h3>
+          <p class="project-github-link">Github link <a
+                  href="https://github.com/ayushi9797/wiry-measure-2833"></a></p>
+          <p class="project-deployed-link"> Deployed link<a
+                  href="https://lively-blini-b17740.netlify.app/"></a></p>
+      </div>
+      
+
+      <div class="project-card">
+        <img src="./image/myntra.png" alt="">
+        <title class="project-title">Myntra</title>
+        <p class="project-description">Clone of 
+            </p>
+        <h3 class="project-tech-stack">Html|CSS|JavaScript</h3>
+        <p class="project-github-link">Github link <a
+                href="https://github.com/ayushi9797/wiry-measure-2833"></a></p>
+        <p class="project-deployed-link"> Deployed link<a
+                href="https://lively-blini-b17740.netlify.app/"></a></p>
     </div>
 
-    <div id="welcome">
-        <img src="/images/welcome (1).gif" alt="">
-    </div>
-    <div id="resume">
-        <img src="/images/Resume_page-0001.jpg" alt="">
-    </div>
+
+    <div class="project-card">
+      <img src="./image/myntra.png" alt="">
+      <title class="project-title">Myntra</title>
+      <p class="project-description">Clone of 
+          </p>
+      <h3 class="project-tech-stack">Html|CSS|JavaScript</h3>
+      <p class="project-github-link">Github link <a
+              href="https://github.com/ayushi9797/wiry-measure-2833"></a></p>
+      <p class="project-deployed-link"> Deployed link<a
+              href="https://lively-blini-b17740.netlify.app/"></a></p>
+  </div>
+    </section>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-        var typed = new Typed(".name", {
-            strings: ["Himanshu Kumar.","BackEnd Developer."],
-            typeSpeed: 120,
-            backSpeed: 90,
-            loop: true
-        });
-    </script>
+
+    <!-------------------- CONTACTS ---------------------->
+    <section id="contact">
+        <h1>Contact</h1>
+        <a id="contact-github" href="https://github.com/ayushi9797">GitHub</a>
+        <a id="contact-linkedin" href="https://www.linkedin.com/in/ayushi-soni-145b28260/">LinkedIn</a>
+        <a id="contact-phone" href="#">Mobile</a>
+        <a id="contact-email" href="soniayushi345@gmail.com">Email</a>
+    </section>
+
+
+
+    <!-------------------- RESUME ---------------------->
+    <section id="resume">
+        <button id="resume-button-1" src="">Resume 1</button>
+        <button id="resume-button-2" src="">Resume 2</button>
+    </section>
+
+
+    <!-------------------- GitHUB ---------------------->
+    <section class="react-activity-calendar">
+        <h1>GitHub React-Activity-Calendar</h1>
+        <img id="github-streak-stats"
+            src="https://camo.githubusercontent.com/1d78f83ff1cf9a446e1b99c3cac3b1774377264805a41cfecd01c37e195d6a98/68747470733a2f2f6769746875622d726561646d652d73747265616b2d73746174732e6865726f6b756170702e636f6d2f3f757365723d686d75333526"
+            alt="streakstat" />
+        <img id="github-top-langs" src="https://camo.githubusercontent.com/0c730fa3b9c5a57604bf5aec05d2f01b63a410af8f74ce01795431331e488a10/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170692f746f702d6c616e67733f757365726e616d653d686d7533352673686f775f69636f6e733d74727565266c6f63616c653d656e266c61796f75743d636f6d70616374"
+            alt="top_languages" />
+        <img id="github-stats-card"
+            src="https://camo.githubusercontent.com/5f001cc83c5bc535791bc48b274e1b215bce95e7b5cc006a5c5ed4034bfff136/68747470733a2f2f6769746875622d726561646d652d73746174732e76657263656c2e6170702f6170693f757365726e616d653d686d7533352673686f775f69636f6e733d74727565266c6f63616c653d656e" alt="stat-card" />
+    </section>
 </body>
 
 </html>

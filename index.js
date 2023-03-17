@@ -21,12 +21,12 @@ function closemenu(){
 
 document.getElementById('resume-link-1').addEventListener("click",()=>{
   // console.log("OPENinig.....")
-  window.location.assign("https://drive.google.com/file/d/10C5IVHqeM2huu0F-KyZHNAo3XD0VGp9w/view?usp=share_link", "_blank");
+  window.location.assign("https://drive.google.com/file/d/1aAKXgCvio3Qej4nPxjhuix-biEL_unHw/view?usp=sharing", "_blank");
 })
 
 document.getElementById('resume-link-2').addEventListener("click",()=>{
   // console.log("OPENinig.....")
-  window.location.assign("https://drive.google.com/file/d/10C5IVHqeM2huu0F-KyZHNAo3XD0VGp9w/view?usp=share_link", "_blank");
+  window.location.assign("https://drive.google.com/file/d/1aAKXgCvio3Qej4nPxjhuix-biEL_unHw/view?usp=sharing", "_blank");
 })
 
 // sr.reveal('#home',{})

@@ -35,4 +35,3 @@ document.getElementById('resume-link-2').addEventListener("click",()=>{
 // sr.reveal('.container',{delay:400})
 // sr.reveal('#resume-button-2',{interval:500})
 
-

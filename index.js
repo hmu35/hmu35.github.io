@@ -6,13 +6,13 @@ function openmenu(){
 function closemenu(){
     sidemenu.style.right="-200px";
 }
- // typing text animation script
- var typed = new Typed(".typing", {
-  strings: ["Full Stack  Developer"],
-  typeSpeed: 100,
-  backSpeed: 60,
-  loop: true,
-})
+//  // typing text animation script
+//  var typed = new Typed(".typing", {
+//   strings: ["Full Stack  Developer"],
+//   typeSpeed: 100,
+//   backSpeed: 60,
+//   loop: true,
+// })
 
 // document.getElementById('resume-button-1').addEventListener("click",()=>{
 //   // console.log("OPENinig.....")

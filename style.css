@@ -542,7 +542,9 @@ box-shadow: 0 0 5px #fff, 0 0 10px #ff4da6, 0 0 100px #ff4da6, 0 0 30px #ff4da6,
 
 #projects{
   padding-top: 90px;
-  height: 100vh;
+  /* height: 100vh; */
+  
+  
 }
 
 #projects h1 {
@@ -565,9 +567,13 @@ margin-bottom: 30px;
   /* margin-top: 50px; */
   /* border: 1px solid red; */
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-  margin: 0px 20px;
+  grid-template-columns: repeat(2, 1fr);
+  /* gap: 50px; */
+  margin: auto;
+
+  width: 80%;
+  column-gap: 50px;
+  /* margin: 0px 20px; */
 
 }
 
@@ -604,7 +610,7 @@ margin-bottom: 30px;
 .project .project-card img {
   width: 90%;
   height: 200px;
-  margin: 0px 15px;
+  margin: 0px 50px;
   border-radius: 10px;
 }
 

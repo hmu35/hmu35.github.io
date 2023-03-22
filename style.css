@@ -326,7 +326,7 @@ animation: blink 12s infinite;
 
 
   /* border: 2px solid rgb(28, 143, 18); */
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   text-decoration: none;
   /* box-shadow: 0 0 5px #fff, 0 0 10px #ff4da6, 0 0 100px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6; */
 
@@ -383,7 +383,7 @@ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa50
 }
 
 .home-content>div:nth-child(2)>img {
-
+  transition: all 0.6s ease;
   width: 100%;
   height: 90%;
   border-radius: 20%;
@@ -633,7 +633,7 @@ margin-bottom: 30px;
 .project .project-card img {
   width: 90%;
   height: 200px;
-  margin: 0px 50px;
+  margin: 0px 30px;
   border-radius: 10px;
 }
 

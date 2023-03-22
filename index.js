@@ -18,3 +18,7 @@ document.getElementById('resume-link-2').addEventListener("click",()=>{
 
 
 
+function apnaDeploy()
+{
+  window.location.href("https://strong-faloodeh-9f3ea9.netlify.app/");
+}

@@ -233,11 +233,10 @@ text-align: center;
   font-size: 75px;
   font-weight: 600;
   /* margin-left: px; */
-  color: #fff;
+  color: black;
   text-align: center;
-  -webkit-animation: glow 1s ease-in-out infinite alternate;
-  -moz-animation: glow 1s ease-in-out infinite alternate;
-  animation: glow 1s ease-in-out infinite alternate;
+  text-shadow: 0 0 2px #fff, 0 0 2px #ff4da6, 0 0 10px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 5px #ff4da6, 0 0 6px #ff4da6;
+
 }
 
 #home .home-content .text-3 {
@@ -361,13 +360,7 @@ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa50
 
   /* border-radius: 50%; */
 }
-.home-img img{
-  /* border-radius: 50%; */
-  -webkit-animation: low 1s ease-in-out infinite alternate;
-  -moz-animation: low 1s ease-in-out infinite alternate;
-  animation: low 1s ease-in-out infinite alternate;
 
-}
 .home-content {
   /* border: 1px solid blue; */
   width: 70%;
@@ -380,17 +373,26 @@ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa50
 .home-content>div:nth-child(2) {
   width: 300px;
   height: 350px;
+ 
 }
 
 .home-content>div:nth-child(2)>img {
   transition: all 0.6s ease;
   width: 100%;
   height: 90%;
-  border-radius: 20%;
+  background-color: #ffb731;
+  border-radius: 50%;
+
+  box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+
+  
+  animation: bounce2 6s ease infinite;
 }
 .home-content>div:nth-child(2)>img:hover{
-  border-radius: 50%;
-  animation: bounce2 2s ease infinite;
+  background: none;
+  -webkit-animation: low 1s ease-in-out infinite alternate;
+  -moz-animation: low 1s ease-in-out infinite alternate;
+  animation: low 1s ease-in-out infinite alternate;
 }
 .home-img img:hover {
   cursor: pointer;
@@ -407,16 +409,17 @@ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa50
   } */
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
-  }
+
+    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+    }
 
   to {
-    text-shadow: 0 0 10px #fff, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6, 0 0 40px #ff4da6;
+    text-shadow: 0 0 10px #fff, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 25px #ffa500, 0 0 30px #ffa500, 0 0 35px #ffa500, 0 0 40px #ffa500;
   }
 }
 @-webkit-keyframes low {
   from {
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #e60073, 0 0 20px #e60073, 0 0 25px #e60073, 0 0 30px #e60073, 0 0 35px #e60073;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff8d00, 0 0 20px #ff8d00, 0 0 25px #ff8d00, 0 0 30px #ff8d00, 0 0 35px #ff8d00;
   }
 
   to {
@@ -538,13 +541,14 @@ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa50
 
   border-radius: 10px 10px 0px 0px;
   margin: auto;
-  /* box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px; */
-  box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
  
 }
 .skills-card img:hover{
   animation: bounce2 2s ease infinite;
   /* border-radius: 50%;  */
+    /* box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000; */
+
 }
 .skills-card-name {
   font-size: 20px;
@@ -644,8 +648,10 @@ margin-bottom: 30px;
 
 }
 .project>div:hover{
-  box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
-  transform: scale(1.05);
+  -webkit-animation: low 1s ease-in-out infinite alternate;
+  -moz-animation: low 1s ease-in-out infinite alternate;
+  animation: low 1s ease-in-out infinite alternate;
+    transform: scale(1.05);
   /* text-shadow: 0 0 5px #fff, 0 0 10px #ff4da6, 0 0 100px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6; */
 
 }

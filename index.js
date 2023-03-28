@@ -8,12 +8,12 @@ function closemenu(){
 }
 document.getElementById('resume-link-1').addEventListener("click",()=>{
 
-  window.location.assign("https://drive.google.com/file/d/1aAKXgCvio3Qej4nPxjhuix-biEL_unHw/view?usp=sharing", "_blank");
+  window.location.assign("https://drive.google.com/file/d/1kJExdD-ji-668y_tadHowvWGC_kxwi5J/view?usp=sharing", "_blank");
 })
 
 document.getElementById('resume-link-2').addEventListener("click",()=>{
  
-  window.location.assign("https://drive.google.com/file/d/1aAKXgCvio3Qej4nPxjhuix-biEL_unHw/view?usp=sharing", "_blank");
+  window.location.assign("https://drive.google.com/file/d/1kJExdD-ji-668y_tadHowvWGC_kxwi5J/view?usp=sharing", "_blank");
 })
 
 

@@ -380,7 +380,7 @@ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa50
   transition: all 0.6s ease;
   width: 100%;
   height: 90%;
-  background-color: #f8c15a;
+  background-color: #ffbf49;
   border-radius: 50%;
 
   box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
@@ -488,7 +488,7 @@ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa50
 /* ..............................Skill Section......................... */
 #skills {
   padding-top: 100px;
-  background-color: black;
+  /* background-color: black; */
 }
 
 .skill {
@@ -611,7 +611,8 @@ margin-bottom: 30px;
   /* background: tomato; */
   /* box-shadow: 0 0 5px #fff, 0 0 10px #ff4da6, 0 0 100px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6; */
 
-  color: white;
+  /* color: black; */
+  /* text-shadow: 0 0 2px #fff, 0 0 2px #ff4da6, 0 0 10px #ff4da6, 0 0 4px #ff4da6, 0 0 5px #ff4da6, 0 0 5px #ff4da6, 0 0 6px #ff4da6; */
 
 }
 
@@ -622,10 +623,7 @@ margin-bottom: 30px;
   margin-bottom: 40px;
   font-family: Comic Sans MS, Comic Sans, cursive;
   
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  background-color: #101110;
-  
-  color: #fff;
+  box-shadow: rgba(235, 233, 233, 0.18) 0px 2px 4px;  color: #fff;
   padding-bottom: 30px;
   border-radius: 10px;
 
@@ -650,12 +648,9 @@ margin-bottom: 30px;
 }
 
 .project>div:hover{
-  -webkit-animation: low 1s ease-in-out infinite alternate;
-  -moz-animation: low 1s ease-in-out infinite alternate;
-  animation: low 1s ease-in-out infinite alternate;
-    transform: scale(1.05);
-  /* text-shadow: 0 0 5px #fff, 0 0 10px #ff4da6, 0 0 100px #ff4da6, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6; */
-
+    box-shadow: none;
+    background-color: rgb(24, 24, 24);
+    transform: scaleX(0.98);
 }
 
 .project-tech-stack {
@@ -777,7 +772,7 @@ border-radius: 20px;
 }
 
 .react-activity-calendar{
-background-color: black;
+/* background-color: black; */
 padding-bottom: 100px;
 }
 .github {

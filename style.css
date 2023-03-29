@@ -776,11 +776,19 @@ border-radius: 20px;
 padding-bottom: 100px;
 }
 .github {
-margin-top: 100px;
+
   display: flex;
   justify-content: space-around;
+  width: 90%;
+  margin: auto;
+  margin-top: 100px;
 }
-
+.github>div{
+  width: 30%;
+}
+img{
+  width: 100%;
+}
 .calendar {
   width: 100%;
   border: 1px solid red;

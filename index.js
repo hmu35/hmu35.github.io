@@ -1,28 +1,34 @@
-let sidemenu=document.getElementById("sidemenu");
+       ///resume-button///
 
-function openmenu(){
-    sidemenu.style.right="0";
-}
-function closemenu(){
-    sidemenu.style.right="-200px";
-}
-document.getElementById('resume-link-1').addEventListener("click",()=>{
-
-  window.location.assign("https://drive.google.com/file/d/1kJExdD-ji-668y_tadHowvWGC_kxwi5J/view?usp=sharing", "_blank");
-})
-
-document.getElementById('resume-link-2').addEventListener("click",()=>{
- 
-  window.location.assign("https://drive.google.com/file/d/1kJExdD-ji-668y_tadHowvWGC_kxwi5J/view?usp=sharing", "_blank");
-})
-
-
-
-function apnaDeploy()
-{
-  window.location.href("https://strong-faloodeh-9f3ea9.netlify.app/");
-}
-
+       let resume1 = document
+       .getElementById("resume-link-1")
+        .addEventListener("click",opendrive);
+     
+       let resume2 = document
+       .getElementById("resume-link-2")
+       .addEventListener("click",opendrive);
+     
+     
+     function opendrive(){
+       window.open(
+         (href =
+           "https://drive.google.com/file/d/1CRiMOu32XD011auQTXA2s-toOtaUATfP/view?usp=sharing")
+       );
+      }
+     
+     
+     
+     
+               //hamburger//
+     
+     let hamburger = document.querySelector(".hamburger")
+     hamburger.onclick = ()=>{
+      let navlist = document.querySelector(".nav-list")
+      navlist.classList.toggle("active")
+     
+     }
+      
+         // typing animation//
 const sr = ScrollReveal({
   origin:'left',
   distance:'120px',
@@ -62,3 +68,5 @@ const sr = ScrollReveal({
 
     sr.reveal('.calendar',{delay:600})
 
+
+  

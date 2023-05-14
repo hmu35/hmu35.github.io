@@ -53,3 +53,8 @@
   sr.reveal('#github-stats-card', { delay: 600 })
   
   sr.reveal('.calendar', { delay: 600 })
+
+  function mode(){
+  let body=document.querySelector("body");
+    
+  }

@@ -639,7 +639,7 @@ footer>a{
   left:0px;
   right:0px;
   width:100vw;
-  background: tomato;  
+  background:#111;  
   transition: 0.2s;
   overflow: hidden;
   }

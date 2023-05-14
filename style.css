@@ -198,11 +198,15 @@ article h1{
   font-weight: 500;
   color:white;
 }
+article>span{
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  margin-bottom: 30px;
+}
 article h1::after{
   content:"";
   height:3px;
   width:225px;
- background-color: tomato;
  display: block;
  margin: auto;
 }
@@ -229,9 +233,11 @@ content{
   display:block ;
   height:3px;
   width:220px;
-  background-color:tomato;
+  /* background-color:tomato; */
   margin: auto;
-
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  margin-bottom: 30px;
 }
 
 .skill-box{
@@ -241,18 +247,24 @@ content{
   grid-template-columns: repeat(5,1fr);
   gap: 50px;
   text-align: center;
-  color:#f1f1f1;
+  
   padding: 40px 50px;
 }   
 .skill-box>div{
+  padding: 5px;
 width:100px;
+
 border-radius: 10%;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-background-color: white;
+box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+/* background-color: white; */
 /* border: 3px solid turquoise; */
 }
+.skill-box>div:hover{
+  cursor: pointer;
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+}
 .skills-card-name{
- color:black;
+  color: white;
 }
 /* .skill-box>div:hover{
   transform: scale(1.1);
@@ -275,8 +287,11 @@ background-color: white;
   display:block ;
   height:3px;
   width:220px;
-  background-color:tomato;
+  /* background-color:tomato; */
   margin: auto;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  margin-bottom: 30px;
 }
 
 .toolls-box{
@@ -286,18 +301,22 @@ background-color: white;
   grid-template-columns: repeat(5,1fr);
   gap: 50px;
   text-align: center;
-  color:#f1f1f1;
+  
   padding: 40px 50px;
 }   
 .toolls-box>div{
 width:100px;
 border-radius: 10%;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-background-color: white;
+padding: 5px;
+box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
 /* border: 3px solid turquoise; */
 }
 .toolls-card-name{
- color:black;
+ color:white;
+}
+.toolls-box>div:hover{
+  box-shadow: blue 0px 0px 0px 2px inset, rgb(255, 255, 255) 10px -10px 0px -3px, rgb(31, 193, 27) 10px -10px, rgb(255, 255, 255) 20px -20px 0px -3px, rgb(255, 217, 19) 20px -20px, rgb(255, 255, 255) 30px -30px 0px -3px, rgb(255, 156, 85) 30px -30px, rgb(255, 255, 255) 40px -40px 0px -3px, rgb(255, 85, 85) 40px -40px;
+  cursor: pointer;
 }
 /* .skill-box>div:hover{
   transform: scale(1.1);
@@ -323,7 +342,7 @@ background-color: white;
 
 .project-card:hover{
   transform: scale(1.02);
-  background: tomato;
+  /* background: tomato; */
   color: black;
 
 }
@@ -348,14 +367,14 @@ color:black;
   color: #fff;
   border-radius: 10px;
   padding:0px 0px 50px 0px;
-  border: 2px solid tomato;
+  /* border: 2px solid tomato; */
   
 }
 
 .project-card img{
   width: 100%;
   border-radius: 10px;
-  border:3px solid tomato
+  /* border:3px solid tomato */
 }
 .project .project-card p{
   text-align: center;

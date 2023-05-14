@@ -187,10 +187,19 @@ animation: blink 12s infinite;
  margin: auto;
  height:250px;
  width:250px;
- border-radius: 20%;
+ border-radius: 50%;
  margin-top: 40px;
  margin-bottom: 30px;
+ background-color: #fdc55e;
  /* border:3px solid turquoise; */
+ box-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+
+}
+.hero img:hover{
+  cursor: pointer;
+  background-color:  rgb(24, 24, 24);
+
+
 }
 article h1{
   font-size: 50px;
@@ -209,6 +218,16 @@ article h1::after{
   width:225px;
  display: block;
  margin: auto;
+}
+article h2{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  
+  color: #fff6a9;
+font-family: "Sacramento", cursive;
+text-align: center;
+animation: blink 12s infinite;
+-webkit-animation: blink 12s infinite;
 }
 content{
   font-size: 17px;
@@ -333,7 +352,7 @@ box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, 
   width: 80%;
   display: grid;
   grid-template-columns: repeat(2,1fr);
-  gap:40px;
+  gap:100px;
   margin: auto;
   padding-top:40px;
   padding-bottom: 40px;
@@ -341,10 +360,7 @@ box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, 
 }
 
 .project-card:hover{
-  transform: scale(1.02);
-  /* background: tomato; */
-  color: black;
-
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .project-card:hover .project-github-link,
 .project-card:hover .project-deployed-link,
@@ -354,7 +370,10 @@ background-color: #010d1d !important;
 color:black;
 }
 .project-card:hover .small_div>img{
-  border: 3px solid #fff;
+  border: none;
+    box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
+
+  width: 100%;
 }
 
 .project-card h2{
@@ -366,15 +385,20 @@ color:black;
   background-color:#020811;;
   color: #fff;
   border-radius: 10px;
-  padding:0px 0px 50px 0px;
-  /* border: 2px solid tomato; */
+  padding:5%;
+  text-align: center;
+  /* border: 2px solid  #fff16f; */
+  box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px;
   
 }
 
 .project-card img{
-  width: 100%;
+ 
+  width: 90%;
   border-radius: 10px;
-  /* border:3px solid tomato */
+  /* border:3px solid  #fff16f; */
+  /* box-shadow: rgb(85, 91, 255) 0px 0px 0px 3px, rgb(31, 193, 27) 0px 0px 0px 6px, rgb(255, 217, 19) 0px 0px 0px 9px, rgb(255, 156, 85) 0px 0px 0px 12px, rgb(255, 85, 85) 0px 0px 0px 15px; */
+
 }
 .project .project-card p{
   text-align: center;

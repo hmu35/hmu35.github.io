@@ -512,10 +512,10 @@ color:black;
 
 
 .contact-content {
-  width:90%;
+  width:95%;
   display: flex;
   margin:auto;
-  justify-content: space-between;
+  justify-content: space-around;
   padding-top:50px;
   padding-bottom: 50px;
   color: #f1f1f1;
@@ -523,7 +523,9 @@ color:black;
 .text {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  font-size: larger;
+  
 }
 .sub-title{
    font-weight:500
@@ -566,11 +568,13 @@ color:black;
 .textarea textarea {
   height: 100%;
   width: 100%;
-  border: 1px solid tomato;
+  border: 2px solid #fdc55e;
   border-radius: 6px;
   outline: none;
+  background-color: rgb(11, 11, 11);
   padding: 0 15px;
   font-size: 17px;
+  color: #f1f1f1;
 }
 .textarea textarea {
   padding-top: 10px;
@@ -582,14 +586,19 @@ color:black;
   height: 45px;
   font-size: 18px;
   font-weight: 500;
-  border-radius: 6px;
+  border-radius: 8px;
+  background-color: #fdc55e;
   cursor: pointer;
-  background: tomato;
-  border: 2px solid tomato;
+  color: black;
+  border: 2px solid #fdc55e; 
   transition: all 0.3s ease;
 }
 .right form .button-area button:hover {
-  color: turquoise;
+  color: #fdc55e;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  font-size: larger;
+  font-weight: bold;
+  border-radius: 15px;
   background: none;
 }
 
@@ -602,6 +611,7 @@ footer{
   padding-bottom: 30px;
   color: white ;
   text-align: center;
+  margin-top: 80px;
 }
   hr{
     margin: auto;

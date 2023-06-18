@@ -12,7 +12,7 @@
      function opendrive(){
        window.open(
          (href =
-           "https://drive.google.com/file/d/1CRiMOu32XD011auQTXA2s-toOtaUATfP/view?usp=sharing")
+           "https://drive.google.com/file/d/13yDBeuELzLJuH5rnBLqBfLbA9yqhiAIb/view?usp=sharing")
        );
       }
      
@@ -46,9 +46,9 @@
   sr.reveal('.project-title', { delay: 200 })
   sr.reveal('.project-description', { delay: 200 })
   sr.reveal('.project-tech-stack', { delay: 200 })
-  sr.reveal('.repo-links', { delay: 200 })
+  sr.reveal('.repo-links', { delay: 100 })
   
-  sr.reveal('#github-streak-stats', { delay: 200 })
+  sr.reveal('#github-streak-stats', { delay: 400 })
   sr.reveal('#github-top-langs', { delay: 400 })
   sr.reveal('#github-stats-card', { delay: 600 })
   

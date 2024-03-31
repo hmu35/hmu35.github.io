@@ -36,9 +36,9 @@
       reset: true
   })
   
-  sr.reveal('#about h1', { delay: 200})
+ 
   sr.reveal('.home-img', { delay: 600 })
-  sr.reveal('#user-detail-intro', { delay: 600 })
+
   sr.reveal('.skill', { delay: 200 })
   
   sr.reveal('.project', {})

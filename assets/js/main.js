@@ -1,254 +1,51 @@
-/**
-* Template Name: Personal
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Updated: Mar 17 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+const navLinks=[...document.querySelectorAll('.desktop-nav a,.mobile-nav a')];
+const sections=[...document.querySelectorAll('section[id]')];
+const reveals=[...document.querySelectorAll('.reveal')];
+const filters=[...document.querySelectorAll('.filter')];
+const cards=[...document.querySelectorAll('.project-spotlight')];
+const progress=document.querySelector('.scroll-progress span');
+const glow=document.querySelector('.cursor-glow');
 
-(function() {
-  "use strict";
+const projectData={
+  pms:{eyebrow:'01 · CORE SYSTEM',title:'PMS / ERP Web Application',summary:'A business-management system built around day-to-day workflows such as billing, inventory, GST and reporting.',problem:'Operational teams need connected screens and records rather than isolated pages. The work centers on making those business flows usable through a web application.',approach:'Build the feature as an end-to-end slice: MVC screens, backend logic, database interaction and validations working together.',stack:'.NET / ASP.NET MVC · C# · SQL Server · JavaScript / jQuery · Bootstrap',delivery:'Business workflows across billing, inventory, GST and reports, with production-oriented improvements and support.'},
+  sudha:{eyebrow:'02 · GOVERNMENT PORTAL',title:'Sudha Bikri Kendra',summary:'A form-driven .NET Core MVC portal for structured application workflows and backend processing.',problem:'The portal needs clear forms, controlled data flow and reliable processing for a real-world institutional workflow.',approach:'Use MVC for the user-facing flow, backend processing for business rules and SQL-backed data handling for records.',stack:'.NET Core · ASP.NET MVC · C# · SQL · HTML / CSS / JavaScript',delivery:'A live government-oriented portal at sudhabikrikendra.in with an application-focused workflow.'},
+  b2b:{eyebrow:'03 · B2B COMMERCE',title:'B2B Order & E-Commerce System',summary:'An online ordering platform connected with PMS workflows for billing, reporting and account operations.',problem:'Online ordering and offline business operations need to stay aligned so customers and internal teams see the same operational flow.',approach:'Connect the customer-facing order experience with the PMS-side business workflow and data movement.',stack:'.NET · MVC · APIs · SQL · JavaScript / Bootstrap',delivery:'A live B2B ordering platform at orderapp1.dynode.in.'},
+  b2c:{eyebrow:'04 · B2C COMMERCE',title:'B2C E-Commerce Platform',summary:'A customer-facing commerce system linked with PMS-backed product and billing workflows.',problem:'Customer ordering needs to stay connected with internal product, billing and operational records.',approach:'Provide a customer-friendly storefront while keeping the backend workflow connected to PMS operations.',stack:'.NET · MVC · APIs · SQL · JavaScript / Bootstrap',delivery:'A live B2C commerce platform at ecom.dynode.in.'}
+};
 
-  /**
-   * Easy selector helper function
-   */
-  const select = (el, all = false) => {
-    el = el.trim()
-    if (all) {
-      return [...document.querySelectorAll(el)]
-    } else {
-      return document.querySelector(el)
-    }
-  }
+const setActive=id=>navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')===`#${id}`));
+const sectionObserver=new IntersectionObserver(entries=>{const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(visible)setActive(visible.target.id);},{rootMargin:'-25% 0px -58% 0px',threshold:[.15,.35,.55]});
+sections.forEach(s=>sectionObserver.observe(s));
 
-  /**
-   * Easy event listener function
-   */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
+const revealObserver=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target);}});},{threshold:.12});
+reveals.forEach(el=>revealObserver.observe(el));
 
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
+navLinks.forEach(a=>a.addEventListener('click',()=>setActive(a.getAttribute('href').slice(1))));
 
-  /**
-   * Scrolls to an element with header offset
-   */
-  const scrollto = (el) => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-  }
+window.addEventListener('scroll',()=>{const max=document.documentElement.scrollHeight-window.innerHeight;progress.style.width=`${max>0?(window.scrollY/max)*100:0}%`;},{passive:true});
 
-  /**
-   * Mobile nav toggle
-   */
-  on('click', '.mobile-nav-toggle', function(e) {
-    select('#navbar').classList.toggle('navbar-mobile')
-    this.classList.toggle('bi-list')
-    this.classList.toggle('bi-x')
-  })
+if(glow && window.matchMedia('(pointer:fine)').matches){window.addEventListener('pointermove',e=>{glow.style.left=`${e.clientX}px`;glow.style.top=`${e.clientY}px`;},{passive:true});}
 
-  /**
-   * Scrool with ofset on links with a class name .scrollto
-   */
-  on('click', '#navbar .nav-link', function(e) {
-    let section = select(this.hash)
-    if (section) {
-      e.preventDefault()
+const tilt=document.querySelector('.tilt-card');
+if(tilt && window.matchMedia('(pointer:fine)').matches){tilt.addEventListener('pointermove',e=>{const r=tilt.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5;const y=(e.clientY-r.top)/r.height-.5;tilt.style.transform=`perspective(1100px) rotateX(${(-y*5).toFixed(2)}deg) rotateY(${(x*6).toFixed(2)}deg)`;});tilt.addEventListener('pointerleave',()=>{tilt.style.transform='';});}
 
-      let navbar = select('#navbar')
-      let header = select('#header')
-      let sections = select('section', true)
-      let navlinks = select('#navbar .nav-link', true)
+document.querySelectorAll('.magnetic').forEach(el=>{if(!window.matchMedia('(pointer:fine)').matches)return;el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();const x=(e.clientX-r.left-r.width/2)*.09;const y=(e.clientY-r.top-r.height/2)*.09;el.style.transform=`translate(${x}px,${y}px)`;});el.addEventListener('pointerleave',()=>el.style.transform='');});
 
-      navlinks.forEach((item) => {
-        item.classList.remove('active')
-      })
+const pipelineSteps=[...document.querySelectorAll('.pipeline-card')];let pipelineIndex=0;
+setInterval(()=>{if(document.hidden||!pipelineSteps.length)return;pipelineSteps.forEach((el,i)=>el.classList.toggle('active',i===pipelineIndex));pipelineIndex=(pipelineIndex+1)%pipelineSteps.length;},1750);
 
-      this.classList.add('active')
+filters.forEach(btn=>btn.addEventListener('click',()=>{const filter=btn.dataset.filter;filters.forEach(b=>b.classList.toggle('active',b===btn));cards.forEach(card=>{card.style.display=(filter==='all'||card.dataset.type===filter)?'block':'none';});}));
 
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
+const modal=document.getElementById('case-modal');
+const modalTitle=document.getElementById('modal-title');
+const modalSummary=document.getElementById('modal-summary');
+const modalEyebrow=document.getElementById('modal-eyebrow');
+const modalProblem=document.getElementById('modal-problem');
+const modalApproach=document.getElementById('modal-approach');
+const modalStack=document.getElementById('modal-stack');
+const modalDelivery=document.getElementById('modal-delivery');
+const closeModal=()=>{modal.classList.remove('open');modal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');};
 
-      if (this.hash == '#header') {
-        header.classList.remove('header-top')
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        return;
-      }
-
-      if (!header.classList.contains('header-top')) {
-        header.classList.add('header-top')
-        setTimeout(function() {
-          sections.forEach((item) => {
-            item.classList.remove('section-show')
-          })
-          section.classList.add('section-show')
-
-        }, 350);
-      } else {
-        sections.forEach((item) => {
-          item.classList.remove('section-show')
-        })
-        section.classList.add('section-show')
-      }
-
-      scrollto(this.hash)
-    }
-  }, true)
-
-  /**
-   * Activate/show sections on load with hash links
-   */
-  window.addEventListener('load', () => {
-    if (window.location.hash) {
-      let initial_nav = select(window.location.hash)
-
-      if (initial_nav) {
-        let header = select('#header')
-        let navlinks = select('#navbar .nav-link', true)
-
-        header.classList.add('header-top')
-
-        navlinks.forEach((item) => {
-          if (item.getAttribute('href') == window.location.hash) {
-            item.classList.add('active')
-          } else {
-            item.classList.remove('active')
-          }
-        })
-
-        setTimeout(function() {
-          initial_nav.classList.add('section-show')
-        }, 350);
-
-        scrollto(window.location.hash)
-      }
-    }
-  });
-
-  /**
-   * Skills animation
-   */
-  let skilsContent = select('.skills-content');
-  if (skilsContent) {
-    new Waypoint({
-      element: skilsContent,
-      offset: '80%',
-      handler: function(direction) {
-        let progress = select('.progress .progress-bar', true);
-        progress.forEach((el) => {
-          el.style.width = el.getAttribute('aria-valuenow') + '%'
-        });
-      }
-    })
-  }
-
-  /**
-   * Testimonials slider
-   */
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-
-  /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item',
-        layoutMode: 'fitRows'
-      });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
-
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-      }, true);
-    }
-
-  });
-
-  /**
-   * Initiate portfolio lightbox 
-   */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate portfolio details lightbox 
-   */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
-
-  /**
-   * Portfolio details slider
-   */
-  new Swiper('.portfolio-details-slider', {
-    speed: 400,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Initiate Pure Counter 
-   */
-  new PureCounter();
-
-})()
+document.querySelectorAll('.open-case').forEach(btn=>btn.addEventListener('click',()=>{const p=projectData[btn.dataset.project];if(!p)return;modalEyebrow.textContent=p.eyebrow;modalTitle.textContent=p.title;modalSummary.textContent=p.summary;modalProblem.textContent=p.problem;modalApproach.textContent=p.approach;modalStack.textContent=p.stack;modalDelivery.textContent=p.delivery;modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');}));
+document.querySelectorAll('[data-close-modal]').forEach(el=>el.addEventListener('click',closeModal));
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
